@@ -1,0 +1,93 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 112 208)
+	(text "control" (rect 5 0 47 15)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 176 25 188)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "RgTO1" (rect 0 0 41 15)(font "Intel Clear" (font_size 8)))
+		(text "RgTO1" (rect 21 27 62 42)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "RgTO0" (rect 0 0 41 15)(font "Intel Clear" (font_size 8)))
+		(text "RgTO0" (rect 21 43 62 58)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "RgIN1" (rect 0 0 36 15)(font "Intel Clear" (font_size 8)))
+		(text "RgIN1" (rect 21 59 57 74)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "RgIN0" (rect 0 0 36 15)(font "Intel Clear" (font_size 8)))
+		(text "RgIN0" (rect 21 75 57 90)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "JMP1" (rect 0 0 34 15)(font "Intel Clear" (font_size 8)))
+		(text "JMP1" (rect 21 91 55 106)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "JMP0" (rect 0 0 34 15)(font "Intel Clear" (font_size 8)))
+		(text "JMP0" (rect 21 107 55 122)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "ULA[0..1]" (rect 0 0 54 15)(font "Intel Clear" (font_size 8)))
+		(text "ULA[0..1]" (rect 21 123 75 138)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "clock" (rect 0 0 30 15)(font "Intel Clear" (font_size 8)))
+		(text "clock" (rect 21 139 51 154)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "Op[0..3]" (rect 0 0 48 15)(font "Intel Clear" (font_size 8)))
+		(text "Op[0..3]" (rect 21 155 69 170)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 160)(pt 16 160)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 80 176))
+	)
+)

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cpu_del
-Tue Oct  7 15:34:10 2025
+Tue Oct 14 13:58:53 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -10,7 +10,13 @@ Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -34,22 +40,27 @@ on the Quartus Prime software download page.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+-----------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue Oct  7 15:34:10 2025               ;
-; Quartus Prime Version       ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
-; Revision Name               ; cpu_del                                         ;
-; Top-level Entity Name       ; CPU                                             ;
-; Family                      ; Cyclone V                                       ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                       ;
-; Total registers             ; N/A until Partition Merge                       ;
-; Total pins                  ; N/A until Partition Merge                       ;
-; Total virtual pins          ; N/A until Partition Merge                       ;
-; Total block memory bits     ; N/A until Partition Merge                       ;
-; Total PLLs                  ; N/A until Partition Merge                       ;
-; Total DLLs                  ; N/A until Partition Merge                       ;
-+-----------------------------+-------------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Oct 14 13:58:53 2025           ;
+; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
+; Revision Name                   ; cpu_del                                         ;
+; Top-level Entity Name           ; cpu_del                                         ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 0                                               ;
+; Total pins                      ; 13                                              ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -58,7 +69,7 @@ on the Quartus Prime software download page.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CEBA4F23C7        ;                    ;
-; Top-level entity name                                                           ; CPU                ; cpu_del            ;
+; Top-level entity name                                                           ; cpu_del            ; cpu_del            ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -155,33 +166,182 @@ on the Quartus Prime software download page.
 +----------------------------+-------------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                             ;
++---------------------------------------------------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                          ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                    ; Library ;
++---------------------------------------------------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------+---------+
+; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/cpu_del.bdf ; yes             ; User Block Diagram/Schematic File        ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/cpu_del.bdf       ;         ;
+; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/ula.bdf     ; yes             ; User Block Diagram/Schematic File        ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/ula.bdf           ;         ;
+; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/control.bdf ; yes             ; User Block Diagram/Schematic File        ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/control.bdf       ;         ;
+; mux.bdf                                                                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/mux.bdf           ;         ;
+; sum.bdf                                                                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/sum.bdf           ;         ;
+; full-adder.bdf                                                            ; yes             ; Auto-Found Block Diagram/Schematic File  ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/full-adder.bdf    ;         ;
+; multiplicador.bdf                                                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/multiplicador.bdf ;         ;
+; divisor.bdf                                                               ; yes             ; Auto-Found Block Diagram/Schematic File  ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/divisor.bdf       ;         ;
+; 21mux.bdf                                                                 ; yes             ; Megafunction                             ; c:/altera_lite/24.1std/quartus/libraries/others/maxplus2/21mux.bdf              ;         ;
+; register.bdf                                                              ; yes             ; Auto-Found Block Diagram/Schematic File  ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/register.bdf      ;         ;
++---------------------------------------------------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 0     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 0     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 13    ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; RgTO1 ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 13    ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |cpu_del                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 13   ; 0            ; |cpu_del            ; cpu_del     ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 13                              ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Tue Oct  7 15:33:59 2025
+    Info: Processing started: Tue Oct 14 13:58:40 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cpu_del -c cpu_del
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
-Warning (12019): Can't analyze file -- file //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/ula.bdf is missing
-Info (12021): Found 1 design units, including 1 entities, in source file //wsl.localhost/ubuntu-24.04/home/luique/usp/digitais/cpu_del/ula/sum.bdf
-    Info (12023): Found entity 1: sum
+Info (12021): Found 1 design units, including 1 entities, in source file cpu_del.bdf
+    Info (12023): Found entity 1: cpu_del
+Info (12021): Found 1 design units, including 1 entities, in source file ula.bdf
+    Info (12023): Found entity 1: ula
+Warning (12019): Can't analyze file -- file //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/ula/sum.bdf is missing
 Warning (12019): Can't analyze file -- file //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/ula/mux.bdf is missing
-Warning (12019): Can't analyze file -- file ula/numberToDisplay.bdf is missing
-Warning (12019): Can't analyze file -- file CPU.bdf is missing
+Warning (12019): Can't analyze file -- file //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/ula/numberToDisplay.bdf is missing
 Info (12021): Found 1 design units, including 1 entities, in source file numbertodisplay.bdf
     Info (12023): Found entity 1: numberToDisplay
 Info (12021): Found 1 design units, including 1 entities, in source file display.bdf
     Info (12023): Found entity 1: display
 Info (12021): Found 1 design units, including 1 entities, in source file counter.bdf
     Info (12023): Found entity 1: counter
-Error (12007): Top-level design entity "CPU" is undefined
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 5 warnings
-    Error: Peak virtual memory: 4801 megabytes
-    Error: Processing ended: Tue Oct  7 15:34:10 2025
-    Error: Elapsed time: 00:00:11
-    Error: Total CPU time (on all processors): 00:00:26
+Info (12021): Found 1 design units, including 1 entities, in source file control.bdf
+    Info (12023): Found entity 1: control
+Info (12127): Elaborating entity "cpu_del" for the top level hierarchy
+Info (12128): Elaborating entity "control" for hierarchy "control:inst"
+Warning (275085): Found inconsistent dimensions for element "R"
+Warning (275080): Converted elements in bus name "R" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "R[0]" to "R0"
+    Warning (275081): Converted element name(s) from "R[1]" to "R1"
+    Warning (275081): Converted element name(s) from "R[2]" to "R2"
+    Warning (275081): Converted element name(s) from "R[3]" to "R3"
+    Warning (275081): Converted element name(s) from "R[0]" to "R0"
+    Warning (275081): Converted element name(s) from "R[2]" to "R2"
+    Warning (275081): Converted element name(s) from "R[3]" to "R3"
+    Warning (275081): Converted element name(s) from "R[1]" to "R1"
+Warning (275009): Pin "RgIN0" not connected
+Info (12128): Elaborating entity "ula" for hierarchy "control:inst|ula:inst"
+Warning (12090): Entity "mux" obtained from "mux.bdf" instead of from Quartus Prime megafunction library
+Warning (12125): Using design file mux.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: mux
+Info (12128): Elaborating entity "mux" for hierarchy "control:inst|ula:inst|mux:inst6"
+Warning (12125): Using design file sum.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: sum
+Info (12128): Elaborating entity "sum" for hierarchy "control:inst|ula:inst|sum:inst2"
+Warning (12125): Using design file full-adder.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: full-adder
+Info (12128): Elaborating entity "full-adder" for hierarchy "control:inst|ula:inst|sum:inst2|full-adder:inst"
+Warning (12125): Using design file multiplicador.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: multiplicador
+Info (12128): Elaborating entity "multiplicador" for hierarchy "control:inst|ula:inst|multiplicador:inst4"
+Warning (275009): Pin "i3" not connected
+Warning (12125): Using design file divisor.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: divisor
+Info (12128): Elaborating entity "divisor" for hierarchy "control:inst|ula:inst|divisor:inst5"
+Warning (275009): Pin "i0" not connected
+Info (12128): Elaborating entity "21mux" for hierarchy "control:inst|21mux:inst20"
+Info (12130): Elaborated megafunction instantiation "control:inst|21mux:inst20"
+Warning (12125): Using design file register.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: register
+Info (12128): Elaborating entity "register" for hierarchy "control:inst|register:inst2"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 13 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "RgTO1"
+    Warning (15610): No output dependent on input pin "RgTO0"
+    Warning (15610): No output dependent on input pin "RgIN1"
+    Warning (15610): No output dependent on input pin "RgIN0"
+    Warning (15610): No output dependent on input pin "JMP1"
+    Warning (15610): No output dependent on input pin "JMP0"
+    Warning (15610): No output dependent on input pin "clock"
+    Warning (15610): No output dependent on input pin "Op[0]"
+    Warning (15610): No output dependent on input pin "Op[1]"
+    Warning (15610): No output dependent on input pin "Op[2]"
+    Warning (15610): No output dependent on input pin "Op[3]"
+    Warning (15610): No output dependent on input pin "ULA[0]"
+    Warning (15610): No output dependent on input pin "ULA[1]"
+Info (21057): Implemented 13 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
+    Info: Peak virtual memory: 4830 megabytes
+    Info: Processing ended: Tue Oct 14 13:58:53 2025
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:20
 
 

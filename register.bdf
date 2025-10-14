@@ -24,7 +24,7 @@ on the Quartus Prime software download page.
 	(input)
 	(rect 240 144 408 160)
 	(text "INPUT" (rect 125 0 153 9)(font "Arial" (font_size 6)))
-	(text "b0" (rect 5 0 17 11)(font "Arial" ))
+	(text "b0" (rect 5 0 16 11)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -40,7 +40,7 @@ on the Quartus Prime software download page.
 	(input)
 	(rect 240 176 408 192)
 	(text "INPUT" (rect 125 0 153 9)(font "Arial" (font_size 6)))
-	(text "b1" (rect 5 0 18 12)(font "Intel Clear" ))
+	(text "b1" (rect 5 0 17 12)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -56,7 +56,7 @@ on the Quartus Prime software download page.
 	(input)
 	(rect 240 208 408 224)
 	(text "INPUT" (rect 125 0 153 9)(font "Arial" (font_size 6)))
-	(text "b2" (rect 5 0 18 12)(font "Intel Clear" ))
+	(text "b2" (rect 5 0 17 12)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -72,7 +72,7 @@ on the Quartus Prime software download page.
 	(input)
 	(rect 240 240 408 256)
 	(text "INPUT" (rect 125 0 153 9)(font "Arial" (font_size 6)))
-	(text "b3" (rect 5 0 18 12)(font "Intel Clear" ))
+	(text "b3" (rect 5 0 17 12)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -88,7 +88,23 @@ on the Quartus Prime software download page.
 	(input)
 	(rect 240 280 408 296)
 	(text "INPUT" (rect 125 0 153 9)(font "Arial" (font_size 6)))
-	(text "clock" (rect 5 0 31 12)(font "Intel Clear" ))
+	(text "clock" (rect 5 0 30 12)(font "Intel Clear" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 16)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 240 312 408 328)
+	(text "INPUT" (rect 125 0 153 9)(font "Arial" (font_size 6)))
+	(text "clear" (rect 5 0 29 12)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -423,4 +439,40 @@ on the Quartus Prime software download page.
 	(text "o3" (rect 608 448 620 460)(font "Intel Clear" ))
 	(pt 600 464)
 	(pt 624 464)
+)
+(connector
+	(pt 568 216)
+	(pt 504 216)
+)
+(connector
+	(text "clear" (rect 552 180 564 203)(font "Intel Clear" )(vertical))
+	(pt 568 208)
+	(pt 568 216)
+)
+(connector
+	(pt 568 320)
+	(pt 504 320)
+)
+(connector
+	(text "clear" (rect 552 284 564 307)(font "Intel Clear" )(vertical))
+	(pt 568 312)
+	(pt 568 320)
+)
+(connector
+	(pt 568 424)
+	(pt 504 424)
+)
+(connector
+	(text "clear" (rect 552 388 564 411)(font "Intel Clear" )(vertical))
+	(pt 568 416)
+	(pt 568 424)
+)
+(connector
+	(pt 568 528)
+	(pt 504 528)
+)
+(connector
+	(text "clear" (rect 552 492 564 515)(font "Intel Clear" )(vertical))
+	(pt 568 520)
+	(pt 568 528)
 )
