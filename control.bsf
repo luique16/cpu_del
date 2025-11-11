@@ -21,7 +21,7 @@ on the Quartus Prime software download page.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 16 16 112 208)
+	(rect 16 16 152 208)
 	(text "control" (rect 5 0 47 15)(font "Intel Clear" (font_size 8)))
 	(text "inst" (rect 8 176 25 188)(font "Intel Clear" ))
 	(port
@@ -87,7 +87,63 @@ on the Quartus Prime software download page.
 		(text "Op[0..3]" (rect 21 155 69 170)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 160)(pt 16 160)(line_width 3))
 	)
+	(port
+		(pt 136 32)
+		(output)
+		(text "OB0" (rect 0 0 25 15)(font "Intel Clear" (font_size 8)))
+		(text "OB0" (rect 90 27 115 42)(font "Intel Clear" (font_size 8)))
+		(line (pt 136 32)(pt 120 32))
+	)
+	(port
+		(pt 136 48)
+		(output)
+		(text "OB1" (rect 0 0 25 15)(font "Intel Clear" (font_size 8)))
+		(text "OB1" (rect 90 43 115 58)(font "Intel Clear" (font_size 8)))
+		(line (pt 136 48)(pt 120 48))
+	)
+	(port
+		(pt 136 64)
+		(output)
+		(text "OB2" (rect 0 0 25 15)(font "Intel Clear" (font_size 8)))
+		(text "OB2" (rect 90 59 115 74)(font "Intel Clear" (font_size 8)))
+		(line (pt 136 64)(pt 120 64))
+	)
+	(port
+		(pt 136 80)
+		(output)
+		(text "OB3" (rect 0 0 25 15)(font "Intel Clear" (font_size 8)))
+		(text "OB3" (rect 90 75 115 90)(font "Intel Clear" (font_size 8)))
+		(line (pt 136 80)(pt 120 80))
+	)
+	(port
+		(pt 136 96)
+		(output)
+		(text "OA0" (rect 0 0 27 15)(font "Intel Clear" (font_size 8)))
+		(text "OA0" (rect 88 91 115 106)(font "Intel Clear" (font_size 8)))
+		(line (pt 136 96)(pt 120 96))
+	)
+	(port
+		(pt 136 112)
+		(output)
+		(text "OA1" (rect 0 0 27 15)(font "Intel Clear" (font_size 8)))
+		(text "OA1" (rect 88 107 115 122)(font "Intel Clear" (font_size 8)))
+		(line (pt 136 112)(pt 120 112))
+	)
+	(port
+		(pt 136 128)
+		(output)
+		(text "OA2" (rect 0 0 27 15)(font "Intel Clear" (font_size 8)))
+		(text "OA2" (rect 88 123 115 138)(font "Intel Clear" (font_size 8)))
+		(line (pt 136 128)(pt 120 128))
+	)
+	(port
+		(pt 136 144)
+		(output)
+		(text "OA3" (rect 0 0 27 15)(font "Intel Clear" (font_size 8)))
+		(text "OA3" (rect 88 139 115 154)(font "Intel Clear" (font_size 8)))
+		(line (pt 136 144)(pt 120 144))
+	)
 	(drawing
-		(rectangle (rect 16 16 80 176))
+		(rectangle (rect 16 16 120 176))
 	)
 )

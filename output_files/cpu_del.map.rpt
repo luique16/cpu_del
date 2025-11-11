@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cpu_del
-Tue Oct 14 13:58:53 2025
+Tue Nov 11 16:16:04 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -13,10 +13,15 @@ Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Analysis & Synthesis IP Cores Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Source assignments for rom:inst2|altsyncram:altsyncram_component|altsyncram_3i74:auto_generated
+ 12. Parameter Settings for User Entity Instance: rom:inst2|altsyncram:altsyncram_component
+ 13. altsyncram Parameter Settings by Entity Instance
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -43,14 +48,14 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 14 13:58:53 2025           ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 11 16:16:04 2025           ;
 ; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                   ; cpu_del                                         ;
 ; Top-level Entity Name           ; cpu_del                                         ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
 ; Total registers                 ; 0                                               ;
-; Total pins                      ; 13                                              ;
+; Total pins                      ; 2                                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -166,22 +171,35 @@ on the Quartus Prime software download page.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                             ;
-+---------------------------------------------------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                                          ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                    ; Library ;
-+---------------------------------------------------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------+---------+
-; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/cpu_del.bdf ; yes             ; User Block Diagram/Schematic File        ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/cpu_del.bdf       ;         ;
-; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/ula.bdf     ; yes             ; User Block Diagram/Schematic File        ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/ula.bdf           ;         ;
-; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/control.bdf ; yes             ; User Block Diagram/Schematic File        ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/control.bdf       ;         ;
-; mux.bdf                                                                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/mux.bdf           ;         ;
-; sum.bdf                                                                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/sum.bdf           ;         ;
-; full-adder.bdf                                                            ; yes             ; Auto-Found Block Diagram/Schematic File  ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/full-adder.bdf    ;         ;
-; multiplicador.bdf                                                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/multiplicador.bdf ;         ;
-; divisor.bdf                                                               ; yes             ; Auto-Found Block Diagram/Schematic File  ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/divisor.bdf       ;         ;
-; 21mux.bdf                                                                 ; yes             ; Megafunction                             ; c:/altera_lite/24.1std/quartus/libraries/others/maxplus2/21mux.bdf              ;         ;
-; register.bdf                                                              ; yes             ; Auto-Found Block Diagram/Schematic File  ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/register.bdf      ;         ;
-+---------------------------------------------------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                  ;
++---------------------------------------------------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                          ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                         ; Library ;
++---------------------------------------------------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------------------+---------+
+; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/cpu_del.bdf ; yes             ; User Block Diagram/Schematic File        ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/cpu_del.bdf            ;         ;
+; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/ula.bdf     ; yes             ; User Block Diagram/Schematic File        ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/ula.bdf                ;         ;
+; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/counter.bdf ; yes             ; User Block Diagram/Schematic File        ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/counter.bdf            ;         ;
+; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/control.bdf ; yes             ; User Block Diagram/Schematic File        ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/control.bdf            ;         ;
+; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/rom.vhd     ; yes             ; User Wizard-Generated File               ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/rom.vhd                ;         ;
+; register.bdf                                                              ; yes             ; Auto-Found Block Diagram/Schematic File  ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/register.bdf           ;         ;
+; 21mux.bdf                                                                 ; yes             ; Megafunction                             ; c:/altera_lite/24.1std/quartus/libraries/others/maxplus2/21mux.bdf                   ;         ;
+; mux.bdf                                                                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/mux.bdf                ;         ;
+; sum.bdf                                                                   ; yes             ; Auto-Found Block Diagram/Schematic File  ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/sum.bdf                ;         ;
+; full-adder.bdf                                                            ; yes             ; Auto-Found Block Diagram/Schematic File  ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/full-adder.bdf         ;         ;
+; multiplicador.bdf                                                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/multiplicador.bdf      ;         ;
+; divisor.bdf                                                               ; yes             ; Auto-Found Block Diagram/Schematic File  ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/divisor.bdf            ;         ;
+; altsyncram.tdf                                                            ; yes             ; Megafunction                             ; c:/altera_lite/24.1std/quartus/libraries/megafunctions/altsyncram.tdf                ;         ;
+; stratix_ram_block.inc                                                     ; yes             ; Megafunction                             ; c:/altera_lite/24.1std/quartus/libraries/megafunctions/stratix_ram_block.inc         ;         ;
+; lpm_mux.inc                                                               ; yes             ; Megafunction                             ; c:/altera_lite/24.1std/quartus/libraries/megafunctions/lpm_mux.inc                   ;         ;
+; lpm_decode.inc                                                            ; yes             ; Megafunction                             ; c:/altera_lite/24.1std/quartus/libraries/megafunctions/lpm_decode.inc                ;         ;
+; aglobal241.inc                                                            ; yes             ; Megafunction                             ; c:/altera_lite/24.1std/quartus/libraries/megafunctions/aglobal241.inc                ;         ;
+; a_rdenreg.inc                                                             ; yes             ; Megafunction                             ; c:/altera_lite/24.1std/quartus/libraries/megafunctions/a_rdenreg.inc                 ;         ;
+; altrom.inc                                                                ; yes             ; Megafunction                             ; c:/altera_lite/24.1std/quartus/libraries/megafunctions/altrom.inc                    ;         ;
+; altram.inc                                                                ; yes             ; Megafunction                             ; c:/altera_lite/24.1std/quartus/libraries/megafunctions/altram.inc                    ;         ;
+; altdpram.inc                                                              ; yes             ; Megafunction                             ; c:/altera_lite/24.1std/quartus/libraries/megafunctions/altdpram.inc                  ;         ;
+; altsyncram_3i74.tdf                                                       ; yes             ; Auto-Found AHDL File                     ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/db/altsyncram_3i74.tdf ;         ;
+; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/Mem01.mif   ; yes             ; Auto-Found Memory Initialization File    ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/Mem01.mif              ;         ;
++---------------------------------------------------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -200,13 +218,13 @@ on the Quartus Prime software download page.
 ;                                             ;       ;
 ; Dedicated logic registers                   ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 13    ;
+; I/O pins                                    ; 2     ;
 ;                                             ;       ;
 ; Total DSP Blocks                            ; 0     ;
 ;                                             ;       ;
-; Maximum fan-out node                        ; RgTO1 ;
+; Maximum fan-out node                        ; CLK   ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 13    ;
+; Total fan-out                               ; 2     ;
 ; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
@@ -216,9 +234,35 @@ on the Quartus Prime software download page.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |cpu_del                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 13   ; 0            ; |cpu_del            ; cpu_del     ; work         ;
+; |cpu_del                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 2    ; 0            ; |cpu_del            ; cpu_del     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                      ;
++--------+--------------+---------+--------------+--------------+--------------------+-----------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance    ; IP Include File                                                       ;
++--------+--------------+---------+--------------+--------------+--------------------+-----------------------------------------------------------------------+
+; Altera ; ROM: 1-PORT  ; 24.1    ; N/A          ; N/A          ; |cpu_del|rom:inst2 ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/rom.vhd ;
++--------+--------------+---------+--------------+--------------+--------------------+-----------------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; counter:inst3|inst                    ; Lost fanout        ;
+; counter:inst3|inst1                   ; Lost fanout        ;
+; counter:inst3|inst2                   ; Lost fanout        ;
+; counter:inst3|inst3                   ; Lost fanout        ;
+; counter:inst3|inst4008                ; Lost fanout        ;
+; counter:inst3|inst5                   ; Lost fanout        ;
+; counter:inst3|popopo                  ; Lost fanout        ;
+; counter:inst3|inst20                  ; Lost fanout        ;
+; Total Number of Removed Registers = 8 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -236,12 +280,102 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++-------------------------------------------------------------------------------------------------+
+; Source assignments for rom:inst2|altsyncram:altsyncram_component|altsyncram_3i74:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------+
+; Assignment                      ; Value              ; From ; To                                ;
++---------------------------------+--------------------+------+-----------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                 ;
++---------------------------------+--------------------+------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rom:inst2|altsyncram:altsyncram_component                                        ;
++------------------------------------+-------------------------------------------------------------------------+----------------+
+; Parameter Name                     ; Value                                                                   ; Type           ;
++------------------------------------+-------------------------------------------------------------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                                                                       ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                                                                      ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                                                     ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                                                                      ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                                                     ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                                                                       ; Untyped        ;
+; OPERATION_MODE                     ; ROM                                                                     ; Untyped        ;
+; WIDTH_A                            ; 16                                                                      ; Signed Integer ;
+; WIDTHAD_A                          ; 8                                                                       ; Signed Integer ;
+; NUMWORDS_A                         ; 256                                                                     ; Signed Integer ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                                            ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                                                                    ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                                                                    ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                                                                    ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                                                                    ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                                                                    ; Untyped        ;
+; WIDTH_B                            ; 1                                                                       ; Signed Integer ;
+; WIDTHAD_B                          ; 1                                                                       ; Signed Integer ;
+; NUMWORDS_B                         ; 0                                                                       ; Signed Integer ;
+; INDATA_REG_B                       ; CLOCK1                                                                  ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                                                  ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1                                                                  ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK1                                                                  ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                                            ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1                                                                  ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                                                                    ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                                                                    ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                                                                    ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                                                                    ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                                                                    ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                                                                    ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                                                                       ; Signed Integer ;
+; WIDTH_BYTEENA_B                    ; 1                                                                       ; Signed Integer ;
+; RAM_BLOCK_TYPE                     ; AUTO                                                                    ; Untyped        ;
+; BYTE_SIZE                          ; 8                                                                       ; Signed Integer ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                               ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                                                    ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                                                    ; Untyped        ;
+; INIT_FILE                          ; //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/Mem01.mif ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                                                  ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                                                                       ; Signed Integer ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                                                                  ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                                                  ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                                                                  ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                                                  ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                                         ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                                         ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                                                                   ; Untyped        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                                                   ; Untyped        ;
+; WIDTH_ECCSTATUS                    ; 3                                                                       ; Signed Integer ;
+; DEVICE_FAMILY                      ; Cyclone V                                                               ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_3i74                                                         ; Untyped        ;
++------------------------------------+-------------------------------------------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                      ;
++-------------------------------------------+-------------------------------------------+
+; Name                                      ; Value                                     ;
++-------------------------------------------+-------------------------------------------+
+; Number of entity instances                ; 1                                         ;
+; Entity Instance                           ; rom:inst2|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                       ;
+;     -- WIDTH_A                            ; 16                                        ;
+;     -- NUMWORDS_A                         ; 256                                       ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                              ;
+;     -- WIDTH_B                            ; 1                                         ;
+;     -- NUMWORDS_B                         ; 0                                         ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                    ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                              ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                      ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                 ;
++-------------------------------------------+-------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-------------------+---------------------------------+
 ; Type              ; Count                           ;
 +-------------------+---------------------------------+
-; boundary_port     ; 13                              ;
+; boundary_port     ; 2                               ;
 ;                   ;                                 ;
 ; Max LUT depth     ; 0.00                            ;
 ; Average LUT depth ; 0.00                            ;
@@ -263,7 +397,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Tue Oct 14 13:58:40 2025
+    Info: Processing started: Tue Nov 11 16:15:44 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cpu_del -c cpu_del
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 10 of the 10 processors detected
@@ -282,19 +416,17 @@ Info (12021): Found 1 design units, including 1 entities, in source file counter
     Info (12023): Found entity 1: counter
 Info (12021): Found 1 design units, including 1 entities, in source file control.bdf
     Info (12023): Found entity 1: control
+Info (12021): Found 2 design units, including 1 entities, in source file rom.vhd
+    Info (12022): Found design unit 1: rom-SYN File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/rom.vhd Line: 53
+    Info (12023): Found entity 1: rom File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/rom.vhd Line: 43
 Info (12127): Elaborating entity "cpu_del" for the top level hierarchy
 Info (12128): Elaborating entity "control" for hierarchy "control:inst"
-Warning (275085): Found inconsistent dimensions for element "R"
-Warning (275080): Converted elements in bus name "R" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "R[0]" to "R0"
-    Warning (275081): Converted element name(s) from "R[1]" to "R1"
-    Warning (275081): Converted element name(s) from "R[2]" to "R2"
-    Warning (275081): Converted element name(s) from "R[3]" to "R3"
-    Warning (275081): Converted element name(s) from "R[0]" to "R0"
-    Warning (275081): Converted element name(s) from "R[2]" to "R2"
-    Warning (275081): Converted element name(s) from "R[3]" to "R3"
-    Warning (275081): Converted element name(s) from "R[1]" to "R1"
 Warning (275009): Pin "RgIN0" not connected
+Warning (12125): Using design file register.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: register
+Info (12128): Elaborating entity "register" for hierarchy "control:inst|register:inst2"
+Info (12128): Elaborating entity "21mux" for hierarchy "control:inst|21mux:inst1"
+Info (12130): Elaborated megafunction instantiation "control:inst|21mux:inst1"
 Info (12128): Elaborating entity "ula" for hierarchy "control:inst|ula:inst"
 Warning (12090): Entity "mux" obtained from "mux.bdf" instead of from Quartus Prime megafunction library
 Warning (12125): Using design file mux.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
@@ -314,34 +446,97 @@ Warning (12125): Using design file divisor.bdf, which is not specified as a desi
     Info (12023): Found entity 1: divisor
 Info (12128): Elaborating entity "divisor" for hierarchy "control:inst|ula:inst|divisor:inst5"
 Warning (275009): Pin "i0" not connected
-Info (12128): Elaborating entity "21mux" for hierarchy "control:inst|21mux:inst20"
-Info (12130): Elaborated megafunction instantiation "control:inst|21mux:inst20"
-Warning (12125): Using design file register.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: register
-Info (12128): Elaborating entity "register" for hierarchy "control:inst|register:inst2"
+Info (12128): Elaborating entity "rom" for hierarchy "rom:inst2"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "rom:inst2|altsyncram:altsyncram_component" File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/rom.vhd Line: 60
+Info (12130): Elaborated megafunction instantiation "rom:inst2|altsyncram:altsyncram_component" File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/rom.vhd Line: 60
+Info (12133): Instantiated megafunction "rom:inst2|altsyncram:altsyncram_component" with the following parameter: File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/rom.vhd Line: 60
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "//wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/Mem01.mif"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Warning (12125): Using design file db/altsyncram_3i74.tdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: altsyncram_3i74 File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/db/altsyncram_3i74.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_3i74" for hierarchy "rom:inst2|altsyncram:altsyncram_component|altsyncram_3i74:auto_generated" File: c:/altera_lite/24.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "counter" for hierarchy "counter:inst3"
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "rom:inst2|altsyncram:altsyncram_component|altsyncram_3i74:auto_generated|q_a[4]" File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/db/altsyncram_3i74.tdf Line: 123
+        Warning (14320): Synthesized away node "rom:inst2|altsyncram:altsyncram_component|altsyncram_3i74:auto_generated|q_a[5]" File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/db/altsyncram_3i74.tdf Line: 145
+        Warning (14320): Synthesized away node "rom:inst2|altsyncram:altsyncram_component|altsyncram_3i74:auto_generated|q_a[6]" File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/db/altsyncram_3i74.tdf Line: 167
+        Warning (14320): Synthesized away node "rom:inst2|altsyncram:altsyncram_component|altsyncram_3i74:auto_generated|q_a[7]" File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/db/altsyncram_3i74.tdf Line: 189
+        Warning (14320): Synthesized away node "rom:inst2|altsyncram:altsyncram_component|altsyncram_3i74:auto_generated|q_a[8]" File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/db/altsyncram_3i74.tdf Line: 211
+        Warning (14320): Synthesized away node "rom:inst2|altsyncram:altsyncram_component|altsyncram_3i74:auto_generated|q_a[9]" File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/db/altsyncram_3i74.tdf Line: 233
+        Warning (14320): Synthesized away node "rom:inst2|altsyncram:altsyncram_component|altsyncram_3i74:auto_generated|q_a[12]" File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/db/altsyncram_3i74.tdf Line: 299
+        Warning (14320): Synthesized away node "rom:inst2|altsyncram:altsyncram_component|altsyncram_3i74:auto_generated|q_a[13]" File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/db/altsyncram_3i74.tdf Line: 321
+        Warning (14320): Synthesized away node "rom:inst2|altsyncram:altsyncram_component|altsyncram_3i74:auto_generated|q_a[14]" File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/db/altsyncram_3i74.tdf Line: 343
+        Warning (14320): Synthesized away node "rom:inst2|altsyncram:altsyncram_component|altsyncram_3i74:auto_generated|q_a[15]" File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/db/altsyncram_3i74.tdf Line: 365
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "rom:inst2|altsyncram:altsyncram_component|altsyncram_3i74:auto_generated|q_a[0]" File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/db/altsyncram_3i74.tdf Line: 35
+        Warning (14320): Synthesized away node "rom:inst2|altsyncram:altsyncram_component|altsyncram_3i74:auto_generated|q_a[1]" File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/db/altsyncram_3i74.tdf Line: 57
+        Warning (14320): Synthesized away node "rom:inst2|altsyncram:altsyncram_component|altsyncram_3i74:auto_generated|q_a[2]" File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/db/altsyncram_3i74.tdf Line: 79
+        Warning (14320): Synthesized away node "rom:inst2|altsyncram:altsyncram_component|altsyncram_3i74:auto_generated|q_a[3]" File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/db/altsyncram_3i74.tdf Line: 101
+        Warning (14320): Synthesized away node "rom:inst2|altsyncram:altsyncram_component|altsyncram_3i74:auto_generated|q_a[10]" File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/db/altsyncram_3i74.tdf Line: 255
+        Warning (14320): Synthesized away node "rom:inst2|altsyncram:altsyncram_component|altsyncram_3i74:auto_generated|q_a[11]" File: //wsl.localhost/Ubuntu-24.04/home/luique/USP/Digitais/cpu_del/db/altsyncram_3i74.tdf Line: 277
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 13 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "RgTO1"
-    Warning (15610): No output dependent on input pin "RgTO0"
-    Warning (15610): No output dependent on input pin "RgIN1"
-    Warning (15610): No output dependent on input pin "RgIN0"
-    Warning (15610): No output dependent on input pin "JMP1"
-    Warning (15610): No output dependent on input pin "JMP0"
-    Warning (15610): No output dependent on input pin "clock"
-    Warning (15610): No output dependent on input pin "Op[0]"
-    Warning (15610): No output dependent on input pin "Op[1]"
-    Warning (15610): No output dependent on input pin "Op[2]"
-    Warning (15610): No output dependent on input pin "Op[3]"
-    Warning (15610): No output dependent on input pin "ULA[0]"
-    Warning (15610): No output dependent on input pin "ULA[1]"
-Info (21057): Implemented 13 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 13 input pins
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLK"
+    Warning (15610): No output dependent on input pin "CLR"
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
-    Info: Peak virtual memory: 4830 megabytes
-    Info: Processing ended: Tue Oct 14 13:58:53 2025
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Peak virtual memory: 4915 megabytes
+    Info: Processing ended: Tue Nov 11 16:16:04 2025
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:29
 
 
